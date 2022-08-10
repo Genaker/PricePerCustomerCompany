@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company" title="catalog_product_price_customer_group_company" sortOrder="10">
+					<resource id="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_save" title="Save catalog_product_price_customer_group_company" sortOrder="10"/>
+					<resource id="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_delete" title="Delete catalog_product_price_customer_group_company" sortOrder="20"/>
+					<resource id="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_update" title="Update catalog_product_price_customer_group_company" sortOrder="30"/>
+					<resource id="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_view" title="View catalog_product_price_customer_group_company" sortOrder="40"/>
+				</resource>
+				<resource id="Magento_Backend::stores">
+					<resource id="Magento_Backend::stores_settings">
+						<resource id="Magento_Config::config">
+							<resource id="Genaker_PricePerCustomerCompany::config_genaker_pricepercustomercompany" title="price_per_customer"/>
+						</resource>
+					</resource>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

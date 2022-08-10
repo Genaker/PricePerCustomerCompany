@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="catalog_product_price_customer_group_company" resource="default" engine="innodb" comment="catalog_product_price_customer_group_company Table">
+		<column xsi:type="int" name="catalog_product_price_customer_group_company_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="catalog_product_price_customer_group_company_id"/>
+		</constraint>
+		<column name="product_id" nullable="false" xsi:type="int" comment="Magent Product ID" identity="false"/>
+		<index referenceId="catalog_product_price_customer_group_company_PRODUCT_ID" indexType="btree">
+			<column name="product_id"/>
+		</index>
+		<column name="price" nullable="true" xsi:type="decimal" comment="price" scale="4" precision="12"/>
+		<column name="discount_type" nullable="false" xsi:type="smallint" comment="Discount Type: 1 - Fixed, 2 - Percentage " default="1" identity="false"/>
+		<index referenceId="catalog_product_price_customer_group_company_DISCOUNT_TYPE" indexType="btree">
+			<column name="discount_type"/>
+		</index>
+		<column name="company_id" nullable="true" xsi:type="int" comment="Company ID" identity="false" unsigned="true"/>
+		<index referenceId="catalog_product_price_customer_group_company_COMPANY_ID" indexType="btree">
+			<column name="company_id"/>
+		</index>
+		<column name="customer_id" nullable="true" xsi:type="int" comment="Customer ID" identity="false" unsigned="true"/>
+		<index referenceId="catalog_product_price_customer_group_company_CUSTOMER_ID" indexType="btree">
+			<column name="customer_id"/>
+		</index>
+		<column name="relation_id" nullable="false" xsi:type="int" comment="Product Customer Group Price Relation" identity="true" unsigned="true"/>
+		<column name="customer_group_id" nullable="true" xsi:type="int" comment="Magento customer Group ID" identity="false" unsigned="true"/>
+		<index referenceId="catalog_product_price_customer_group_company_CUSTOMER_GROUP_ID" indexType="btree">
+			<column name="customer_group_id"/>
+		</index>
+	</table>
+	<table name="sales_order">
+		<column name="customer_pricing_applied" nullable="true" xsi:type="varchar" comment="Customer Pricing Applied" length="255"/>
+	</table>
+</schema>

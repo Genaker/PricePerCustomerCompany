@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Genaker::top_level" title="Genaker" module="Genaker_PricePerCustomerCompany" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company" title="catalog product price customer group company" module="Genaker_PricePerCustomerCompany" sortOrder="9999" resource="Magento_Backend::content" parent="Genaker::top_level" action="genaker_pricepercustomercompany/catalogproductpricecustomergroupcompany/index"/>
+	</menu>
+</config>

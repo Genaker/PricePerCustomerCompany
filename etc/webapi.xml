@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/genaker-pricepercustomercompany/catalog_product_price_customer_group_company" method="POST">
+		<service class="Genaker\PricePerCustomerCompany\Api\CatalogProductPriceCustomerGroupCompanyRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_save"/>
+		</resources>
+	</route>
+	<route url="/V1/genaker-pricepercustomercompany/catalog_product_price_customer_group_company/search" method="GET">
+		<service class="Genaker\PricePerCustomerCompany\Api\CatalogProductPriceCustomerGroupCompanyRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_view"/>
+		</resources>
+	</route>
+	<route url="/V1/genaker-pricepercustomercompany/catalog_product_price_customer_group_company/:catalogProductPriceCustomerGroupCompanyId" method="GET">
+		<service class="Genaker\PricePerCustomerCompany\Api\CatalogProductPriceCustomerGroupCompanyRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_view"/>
+		</resources>
+	</route>
+	<route url="/V1/genaker-pricepercustomercompany/catalog_product_price_customer_group_company/:catalogProductPriceCustomerGroupCompanyId" method="PUT">
+		<service class="Genaker\PricePerCustomerCompany\Api\CatalogProductPriceCustomerGroupCompanyRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_update"/>
+		</resources>
+	</route>
+	<route url="/V1/genaker-pricepercustomercompany/catalog_product_price_customer_group_company/:catalogProductPriceCustomerGroupCompanyId" method="DELETE">
+		<service class="Genaker\PricePerCustomerCompany\Api\CatalogProductPriceCustomerGroupCompanyRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Genaker_PricePerCustomerCompany::catalog_product_price_customer_group_company_delete"/>
+		</resources>
+	</route>
+</routes>

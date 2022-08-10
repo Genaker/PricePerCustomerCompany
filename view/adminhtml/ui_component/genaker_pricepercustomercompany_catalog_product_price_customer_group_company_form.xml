@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">catalog_product_price_customer_group_company_form.catalog_product_price_customer_group_company_form_data_source</item>
+		</item>
+		<item name="label" xsi:type="string" translate="true">General Information</item>
+		<item name="template" xsi:type="string">templates/form/collapsible</item>
+	</argument>
+	<settings>
+		<buttons>
+			<button name="back" class="Genaker\PricePerCustomerCompany\Block\Adminhtml\Catalog\Product\Price\Customer\Group\Company\Edit\BackButton"/>
+			<button name="delete" class="Genaker\PricePerCustomerCompany\Block\Adminhtml\Catalog\Product\Price\Customer\Group\Company\Edit\DeleteButton"/>
+			<button name="save" class="Genaker\PricePerCustomerCompany\Block\Adminhtml\Catalog\Product\Price\Customer\Group\Company\Edit\SaveButton"/>
+			<button name="save_and_continue" class="Genaker\PricePerCustomerCompany\Block\Adminhtml\Catalog\Product\Price\Customer\Group\Company\Edit\SaveAndContinueButton"/>
+		</buttons>
+		<namespace>catalog_product_price_customer_group_company_form</namespace>
+		<dataScope>data</dataScope>
+		<deps>
+			<dep>catalog_product_price_customer_group_company_form.catalog_product_price_customer_group_company_form_data_source</dep>
+		</deps>
+	</settings>
+	<dataSource name="catalog_product_price_customer_group_company_form_data_source">
+		<argument name="data" xsi:type="array">
+			<item name="js_config" xsi:type="array">
+				<item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+			</item>
+		</argument>
+		<settings>
+			<submitUrl path="*/*/save"/>
+		</settings>
+		<dataProvider name="catalog_product_price_customer_group_company_form_data_source" class="Genaker\PricePerCustomerCompany\Model\Catalogproductpricecustomergroupcompany\DataProvider">
+			<settings>
+				<requestFieldName>catalog_product_price_customer_group_company_id</requestFieldName>
+				<primaryFieldName>catalog_product_price_customer_group_company_id</primaryFieldName>
+			</settings>
+		</dataProvider>
+	</dataSource>
+	<fieldset name="general">
+		<settings>
+			<label>General</label>
+		</settings>
+		<field name="price" formElement="input" sortOrder="20">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="source" xsi:type="string">catalog_product_price_customer_group_company</item>
+				</item>
+			</argument>
+			<settings>
+				<dataType>text</dataType>
+				<label translate="true">price</label>
+				<dataScope>price</dataScope>
+				<validation>
+					<rule name="required-entry" xsi:type="boolean">false</rule>
+				</validation>
+			</settings>
+		</field>
+		<field name="discount_type" formElement="input" sortOrder="30">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="source" xsi:type="string">catalog_product_price_customer_group_company</item>
+				</item>
+			</argument>
+			<settings>
+				<dataType>text</dataType>
+				<label translate="true">discount_type</label>
+				<dataScope>discount_type</dataScope>
+				<validation>
+					<rule name="required-entry" xsi:type="boolean">false</rule>
+				</validation>
+			</settings>
+		</field>
+		<field name="company_id" formElement="input" sortOrder="40">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="source" xsi:type="string">catalog_product_price_customer_group_company</item>
+				</item>
+			</argument>
+			<settings>
+				<dataType>text</dataType>
+				<label translate="true">company_id</label>
+				<dataScope>company_id</dataScope>
+				<validation>
+					<rule name="required-entry" xsi:type="boolean">false</rule>
+				</validation>
+			</settings>
+		</field>
+		<field name="customer_id" formElement="input" sortOrder="50">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="source" xsi:type="string">catalog_product_price_customer_group_company</item>
+				</item>
+			</argument>
+			<settings>
+				<dataType>text</dataType>
+				<label translate="true">customer_id</label>
+				<dataScope>customer_id</dataScope>
+				<validation>
+					<rule name="required-entry" xsi:type="boolean">false</rule>
+				</validation>
+			</settings>
+		</field>
+		<field name="customer_group_id" formElement="input" sortOrder="70">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="source" xsi:type="string">catalog_product_price_customer_group_company</item>
+				</item>
+			</argument>
+			<settings>
+				<dataType>text</dataType>
+				<label translate="true">customer_group_id</label>
+				<dataScope>customer_group_id</dataScope>
+				<validation>
+					<rule name="required-entry" xsi:type="boolean">false</rule>
+				</validation>
+			</settings>
+		</field>
+	</fieldset>
+</form>

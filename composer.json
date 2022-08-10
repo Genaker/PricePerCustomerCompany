@@ -1,0 +1,22 @@
+{
+    "name": "genaker/module-pricepercustomercompany",
+    "description": "Module Price Per Customer",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Custop Price Per Customer, Customer Group, Company",
+            "email": "egorshitikov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Genaker\\PricePerCustomerCompany\\": ""
+        }
+    }
+}

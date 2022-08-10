@@ -1,0 +1,5 @@
+
+type Query {
+    
+    product  : Product @resolver( class: "Genaker\\PricePerCustomerCompany\\Model\\Resolver\\Product")  
+}
